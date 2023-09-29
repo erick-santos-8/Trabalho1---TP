@@ -167,7 +167,7 @@ const void Texto::validar(string valor) {
             if (ispontuacao(valor.at(i + 1))) { // Verifica se existe um sinal de pontuacao seguido de outro
                 throw invalid_argument("O texto nao pode conter sinais de pontuacao sequenciados.");
             }
-            if (!isupper(valor.at(i + 1)) && (valor.at(i + 1) != ',' || valor.at(i + 1) != ';')) { // Verifica se o proximo caractere depois de um sinal de pontuacao (!= ',', ';')
+            if (!isupper(valor.at(i + 1)) && (valor.at(i) != ',' && valor.at(i) != ';')) { // Verifica se o proximo caractere depois de um sinal de pontuacao (!= ',', ';')
                 throw invalid_argument("Letra depois dos seguintes sinais de pontuacao ('!', '.', '?') devem ser maiusculas.");
             }
         }
