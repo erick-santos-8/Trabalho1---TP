@@ -7,6 +7,7 @@
 
 using namespace std;
 
+//Dominios ----------------------------------------------------------------------------------------------------
 class TUCodigo {
 private:
     string VALOR_VALIDO   = "LD54";         // Definição de de caso válido.
@@ -109,4 +110,56 @@ public:
     int run();                              // Método para executar teste.
 };
 
+//Entidades ---------------------------------------------------------------------------------------------------
+
+class TUConta {
+    private:
+        string VALOR_VALIDO_TEXTO = "Testando!Teste concluido";      // Definição de constante para evitar número mágico.
+        string VALOR_VALIDO_EMAIL = "teste@email.com";
+        string VALOR_VALIDO_SENHA = "B?e31";
+        Conta *conta;                       // Referência para unidade em teste.
+        int estado;                             // Estado do teste.
+        void setUp();                           // Método para criar unidade em teste.
+        void tearDown();                        // Método para destruir unidade em teste.
+        void testarCenarioSucesso();            // Cenário de teste.
+    public:
+        const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
+        const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
+        int run();                              // Método para executar teste.
+};
+
+class TUQuadro {
+    private:
+        string VALOR_VALIDO_CODIGO = "RC01";
+        string VALOR_VALIDO_NOME = "Quadro";
+        string VALOR_VALIDO_DESCRICAO = "Primeiro teste";
+        int VALOR_VALIDO_LIMITE = 5;
+        Quadro *quadro;
+        int estado;                             // Estado do teste.
+        void setUp();                           // Método para criar unidade em teste.
+        void tearDown();                        // Método para destruir unidade em teste.
+        void testarCenarioSucesso();            // Cenário de teste.
+    public:
+        const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
+        const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
+        int run();                              // Método para executar teste.
+
+};
+
+class TUCartao {
+    private:
+        string VALOR_VALIDO_CODIGO = "CR07";
+        string VALOR_VALIDO_NOME = "Cartao";
+        string VALOR_VALIDO_DESCRICAO = "Segundo teste";
+        string VALOR_VALIDO_COLUNA = "SOLICITADO";
+        Cartao *cartao;
+        int estado;                             // Estado do teste.
+        void setUp();                           // Método para criar unidade em teste.
+        void tearDown();                        // Método para destruir unidade em teste.
+        void testarCenarioSucesso();            // Cenário de teste.
+    public:
+        const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
+        const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
+        int run();                              // Método para executar teste.
+};
 #endif // TESTES_H_INCLUDED

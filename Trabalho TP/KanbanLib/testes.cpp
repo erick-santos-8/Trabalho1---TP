@@ -1,6 +1,8 @@
 #include "testes.h"
 #include <stdexcept>
+#include <iostream>
 
+//Dominios -------------------------------------------------------------------------------------------------------
 //Métodos da classe TUCodigo
 
 void TUCodigo::setUp(){
@@ -29,18 +31,18 @@ void TUCodigo::testarCenarioFalha(){
     try{
         codigo->setCodigo(VALOR_INVALIDO);
         estado = FALHA;
-        cout << "Teste de cenario invalido foi mal-sucedido." << endl << endl;
+        cout << "Teste de cenario invalido foi mal-sucedido." << endl;
     }
     catch(invalid_argument &excecao){
         if (codigo->getCodigo() == VALOR_INVALIDO)
             estado = FALHA;
-            cout << "Teste de cenario invalido foi bem-sucedido." << endl << endl;
+            cout << "Teste de cenario invalido foi bem-sucedido." << endl;
     }
 }
 
 int TUCodigo::run(){
 
-    cout << endl << "Iniciando teste de unidade em classe Codigo..." << endl << endl;
+    cout << "Iniciando teste de unidade em classe Codigo..." << endl;
 
     setUp();
     testarCenarioSucesso();
@@ -77,18 +79,18 @@ void TUColuna::testarCenarioFalha(){
     try{
         coluna->setColuna(VALOR_INVALIDO);
         estado = FALHA;
-        cout << "Teste de cenario invalido foi mal-sucedido." << endl << endl;
+        cout << "Teste de cenario invalido foi mal-sucedido." << endl;
     }
     catch(invalid_argument &excecao){
         if (coluna->getColuna() == VALOR_INVALIDO)
             estado = FALHA;
-            cout << "Teste de cenario invalido foi bem-sucedido." << endl << endl;
+            cout << "Teste de cenario invalido foi bem-sucedido." << endl;
     }
 }
 
 int TUColuna::run(){
 
-    cout << endl << "Iniciando teste de unidade em classe Coluna..." << endl << endl;
+    cout << "Iniciando teste de unidade em classe Coluna..." << endl;
 
     setUp();
     testarCenarioSucesso();
@@ -125,18 +127,18 @@ void TUEmail::testarCenarioFalha(){
     try{
         email->setEmail(VALOR_INVALIDO);
         estado = FALHA;
-        cout << "Teste de cenario invalido foi mal-sucedido." << endl << endl;
+        cout << "Teste de cenario invalido foi mal-sucedido." << endl;
     }
     catch(invalid_argument &excecao){
         if (email->getEmail() == VALOR_INVALIDO)
             estado = FALHA;
-            cout << "Teste de cenario invalido foi bem-sucedido." << endl << endl;
+            cout << "Teste de cenario invalido foi bem-sucedido." << endl;
     }
 }
 
 int TUEmail::run(){
 
-    cout << endl << "Iniciando teste de unidade em classe Email..." << endl << endl;
+    cout << "Iniciando teste de unidade em classe Email..." <<endl;
 
     setUp();
     testarCenarioSucesso();
@@ -173,18 +175,18 @@ void TULimite::testarCenarioFalha(){
     try{
         limite->setLimite(VALOR_INVALIDO);
         estado = FALHA;
-        cout << "Teste de cenario invalido foi mal-sucedido." << endl << endl;
+        cout << "Teste de cenario invalido foi mal-sucedido." << endl;
     }
     catch(invalid_argument &excecao){
         if (limite->getLimite() == VALOR_INVALIDO)
             estado = FALHA;
-            cout << "Teste de cenario invalido foi bem-sucedido." << endl << endl;
+            cout << "Teste de cenario invalido foi bem-sucedido." << endl;
     }
 }
 
 int TULimite::run(){
 
-    cout << endl << "Iniciando teste de unidade em classe Limite..." << endl << endl;
+    cout << "Iniciando teste de unidade em classe Limite..." << endl;
 
     setUp();
     testarCenarioSucesso();
@@ -221,18 +223,18 @@ void TUSenha::testarCenarioFalha(){
     try{
         senha->setSenha(VALOR_INVALIDO);
         estado = FALHA;
-        cout << "Teste de cenario invalido foi mal-sucedido." << endl << endl;
+        cout << "Teste de cenario invalido foi mal-sucedido." << endl;
     }
     catch(invalid_argument &excecao){
         if (senha->getSenha() == VALOR_INVALIDO)
             estado = FALHA;
-            cout << "Teste de cenario invalido foi bem-sucedido." << endl << endl;
+            cout << "Teste de cenario invalido foi bem-sucedido." << endl;
     }
 }
 
 int TUSenha::run(){
 
-    cout << endl << "Iniciando teste de unidade em classe Senha..." << endl << endl;
+    cout << "Iniciando teste de unidade em classe Senha..." << endl;
 
     setUp();
     testarCenarioSucesso();
@@ -269,22 +271,144 @@ void TUTexto::testarCenarioFalha(){
     try{
         texto->setTexto(VALOR_INVALIDO);
         estado = FALHA;
-        cout << "Teste de cenario invalido foi mal-sucedido." << endl << endl;
+        cout << "Teste de cenario invalido foi mal-sucedido." << endl;
     }
     catch(invalid_argument &excecao){
         if (texto->getTexto() == VALOR_INVALIDO)
             estado = FALHA;
-            cout << "Teste de cenario invalido foi bem-sucedido." << endl << endl;
+            cout << "Teste de cenario invalido foi bem-sucedido." << endl;
     }
 }
 
 int TUTexto::run(){
 
-    cout << endl << "Iniciando teste de unidade em classe Texto..." << endl << endl;
+    cout << "Iniciando teste de unidade em classe Texto..." << endl;
 
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+//Entidades ----------------------------------------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Implementações de métodos de classe de teste de unidade.
+
+void TUConta::setUp(){
+    conta = new Conta();
+    estado = SUCESSO;
+}
+
+void TUConta::tearDown(){
+    delete conta;
+}
+
+void TUConta::testarCenarioSucesso(){
+    Texto nome;
+    nome.setTexto(VALOR_VALIDO_TEXTO);
+    conta->setNome(nome);
+    if(conta->getNome().getTexto() != VALOR_VALIDO_TEXTO)
+        estado = FALHA;
+
+    Email email;
+    email.setEmail(VALOR_VALIDO_EMAIL);
+    conta->setEmail(email);
+    if(conta->getEmail().getEmail() != VALOR_VALIDO_EMAIL)
+        estado = FALHA;
+
+    Senha senha;
+    senha.setSenha(VALOR_VALIDO_SENHA);
+    conta->setSenha(senha);
+    if(conta->getSenha().getSenha() != VALOR_VALIDO_SENHA)
+        estado = FALHA;
+}
+
+int TUConta::run(){
+    cout << "Iniciando teste de unidade em entidade Conta..." << endl;
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
+void TUQuadro::setUp(){
+    quadro = new Quadro();
+    estado = SUCESSO;
+}
+void TUQuadro::tearDown(){
+    delete quadro;
+}
+
+void TUQuadro::testarCenarioSucesso(){
+    Codigo codigo;
+    codigo.setCodigo(VALOR_VALIDO_CODIGO);
+    quadro->setCodigo(codigo);
+    if(quadro->getCodigo().getCodigo() != VALOR_VALIDO_CODIGO)
+        estado = FALHA;
+
+    Texto nome;
+    nome.setTexto(VALOR_VALIDO_NOME);
+    quadro->setNome(nome);
+    if(quadro->getNome().getTexto() != VALOR_VALIDO_NOME)
+        estado = FALHA;
+
+    Texto descricao;
+    descricao.setTexto(VALOR_VALIDO_DESCRICAO);
+    quadro->setDescricao(descricao);
+    if(quadro->getDescricao().getTexto() != VALOR_VALIDO_DESCRICAO)
+        estado = FALHA;
+
+    Limite limite;
+    limite.setLimite(VALOR_VALIDO_LIMITE);
+    quadro->setLimite(limite);
+    if(quadro->getLimite().getLimite() != VALOR_VALIDO_LIMITE)
+        estado = FALHA;
+}
+int TUQuadro::run(){
+    cout << "Iniciando teste de unidade em entidade Quadro..." << endl;
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
+void TUCartao::setUp(){
+    cartao = new Cartao();
+    estado = SUCESSO;
+}
+void TUCartao::tearDown(){
+    delete cartao;
+}
+void TUCartao::testarCenarioSucesso(){
+    Codigo codigo;
+    codigo.setCodigo(VALOR_VALIDO_CODIGO);
+    cartao->setCodigo(codigo);
+    if(cartao->getCodigo().getCodigo() != VALOR_VALIDO_CODIGO)
+        estado = FALHA;
+
+    Texto nome;
+    nome.setTexto(VALOR_VALIDO_NOME);
+    cartao->setNome(nome);
+    if(cartao->getNome().getTexto() != VALOR_VALIDO_NOME)
+        estado = FALHA;
+
+    Texto descricao;
+    descricao.setTexto(VALOR_VALIDO_DESCRICAO);
+    cartao->setDescricao(descricao);
+    if(cartao->getDescricao().getTexto() != VALOR_VALIDO_DESCRICAO)
+        estado = FALHA;
+
+    Coluna coluna;
+    coluna.setColuna(VALOR_VALIDO_COLUNA);
+    cartao->setColuna(coluna);
+    if(cartao->getColuna().getColuna() != VALOR_VALIDO_COLUNA)
+        estado = FALHA;
+}
+int TUCartao::run(){
+    cout << "Iniciando teste de unidade em entidade Cartao..." << endl;
+    setUp();
+    testarCenarioSucesso();
     tearDown();
     return estado;
 }

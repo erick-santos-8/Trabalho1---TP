@@ -1,16 +1,16 @@
-#include "./dominios.hpp"
+#include "dominios.h"
 
 const void Codigo::validar(string valor) {
     if (valor.size() != TAMANHO_CODIGO) { // Verifica se o codigo tem 4 caracteres
         throw invalid_argument("Codigo deve ter 4 caracteres.");
     }
-    
+
     for (int i = 0; i < 2; i++) {
         if (!isupper(valor.at(i))) { // Verifica se os primeiros caracteres sao letras maiusculas.
             throw invalid_argument("Os 2 primeiros caracteres devem ser letras maiusculas.");
         }
     }
-    
+
     for (int i = 2; i < 4; i++) {
         if (!isdigit(valor.at(i))) { // Verifica se os primeiros caracteres sao numeros.
             throw invalid_argument("Os 2 primeiros caracteres devem ser numeros.");
@@ -40,11 +40,11 @@ const void Email::validar(string valor) {
     size_t pos_separador;
     pos_separador = valor.find("@");
 
-    if (pos_separador == -1) { // Verifica se existe algum '@' 
+    if (pos_separador == -1) { // Verifica se existe algum '@'
         throw invalid_argument("O caractere @ nao pode ser encontrado.");
     }
 
-    if (pos_separador != valor.rfind("@")) { // Verifica se existe mais de 1 '@' 
+    if (pos_separador != valor.rfind("@")) { // Verifica se existe mais de 1 '@'
         throw invalid_argument("O caractere '@' so pode ser utilizado para separar o nome e o dominio.");
     }
 

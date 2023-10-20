@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1697839895 source:c:\users\esago\onedrive\햞ea de trabalho\projetotp\trabalho1---tp\trabalho tp\kanbanlib\dominios.cpp
+	"./dominios.hpp"
+
+1697839895 c:\users\esago\onedrive\햞ea de trabalho\projetotp\trabalho1---tp\trabalho tp\kanbanlib\dominios.hpp
+	<string>
+	<stdexcept>
+
+1697839895 source:c:\users\esago\onedrive\햞ea de trabalho\projetotp\trabalho1---tp\trabalho tp\kanbanlib\entidades.cpp
+	"entidades.h"
+
+1697840242 c:\users\esago\onedrive\햞ea de trabalho\projetotp\trabalho1---tp\trabalho tp\kanbanlib\entidades.h
+	"dominios.h"
+	<string>
+
+1697843887 source:c:\users\esago\onedrive\햞ea de trabalho\projetotp\trabalho1---tp\trabalho tp\kanbanlib\main.cpp
+	<iostream>
+	"dominios.h"
+	"entidades.h"
+	"testes.h"
+
+1697840104 c:\users\esago\onedrive\햞ea de trabalho\projetotp\trabalho1---tp\trabalho tp\kanbanlib\dominios.h
+	<string>
+	<stdexcept>
+
+1697843832 source:c:\users\esago\onedrive\햞ea de trabalho\projetotp\trabalho1---tp\trabalho tp\kanbanlib\testes.cpp
+	"testes.h"
+	<stdexcept>
+	<iostream>
+
+1697843640 c:\users\esago\onedrive\햞ea de trabalho\projetotp\trabalho1---tp\trabalho tp\kanbanlib\testes.h
+	"dominios.h"
+	"entidades.h"
+	<string>
+
