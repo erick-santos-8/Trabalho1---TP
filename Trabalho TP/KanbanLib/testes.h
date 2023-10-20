@@ -3,6 +3,7 @@
 
 #include "dominios.h"
 #include "entidades.h"
+#include <string>
 
 using namespace std;
 
