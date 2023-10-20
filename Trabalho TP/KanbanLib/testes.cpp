@@ -165,7 +165,7 @@ int TULimite::run(){
     return estado;
 }
 
-//Métodos da classe TUsenha
+//Métodos da classe TUSenha
 
 void TUSenha::setUp(){
     senha = new Senha();
