@@ -1,8 +1,5 @@
 #include "testes.h"
 
-// --------------------------------------------------------------------------
-// Implementações de métodos de classe de teste de unidade.
-
 void TUCodigo::setUp(){
     codigo = new Codigo();
     estado = SUCESSO;
@@ -41,9 +38,6 @@ int TUCodigo::run(){
     tearDown();
     return estado;
 }
-
-// --------------------------------------------------------------------------
-// Implementações de métodos de classe de teste de unidade.
 
 void TUProjeto::setUp(){
     projeto = new Projeto();
