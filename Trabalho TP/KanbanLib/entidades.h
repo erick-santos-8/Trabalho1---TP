@@ -1,20 +1,25 @@
 #ifndef ENTIDADES_H_INCLUDED
 #define ENTIDADES_H_INCLUDED
 
-#include "dominios.h"
+#include "dominios.hpp"
 #include <string>
 
 using namespace std;
+
 
 //=============================
 //||        CONTA USUARIO    ||
 //=============================
 
-/// @brief Refere-se as contas dos usuários que farão uso da ferramenta de Kanban.
+/**
+*@brief Classe Conta Usuario
+*@brief Refere-se as contas dos usuários que farão uso da ferramenta de Kanban. A conta de usuario permite que uma pessoa tenha acesso ao sistema Kanban e as suas funcionalidades
+*@author Maria da Conceicao L Afonso / Matr 170003370
+*/
 
 class Conta {
     private:
-        /// Declara cada atributo da classe Conta
+        /// Declara cada atributo da classe Conta que é composta por nome, o e-mail e a senha do usuario que terá acesso ao ambiente
         Texto nome;
         Email email;
         Senha senha;
@@ -60,11 +65,15 @@ inline Senha Conta::getSenha() const {
 //||        QUADRO           ||
 //=============================
 
-/// @brief Refere-se aos quadros Kanban criado pelos usuários.
+/**
+*@brief Classe Quadro
+*@brief Refere-se aos quadros Kanban criados pelos usuários.Um quadro Kanban permite a gestão das tarefas por meio das colunas - Solicitado, Em execucao e Concluido - e de cartoes, tarefas
+*@author Maria da Conceicao L Afonso / Matr 170003370
+*/
 
 class Quadro {
     private:
-        /// Declara cada atributo da classe Quadro
+        /// Declara cada atributo da classe Quadro que é composto por codigo, nome, descricao e limite
         Codigo codigo;
         Texto nome;
         Texto descricao;
@@ -122,11 +131,15 @@ inline Limite Quadro::getLimite() const {
 //||        CARTAO           ||
 //=============================
 
-/// @brief Refere-se aos Cartoes dos quadros da ferramenta de Kanban.
+/**
+*@brief Classe Cartao
+*@brief Refere-se aos Cartoes dos quadros da ferramenta de Kanban. Os cartões permitem que os usuários identifiquem as tarefas e itens do trabalho que devem ser realizados
+*@author Maria da Conceicao L Afonso / Matr 170003370
+*/
 
 class Cartao {
     private:
-        /// Declara cada atributo da classe Cartao
+        /// Declara cada atributo da classe Cartao que é composto por codigo, nome, descricao e coluna - Solicitado, Em execucao e Concluido.
         Codigo codigo;
         Texto nome;
         Texto descricao;
