@@ -10,13 +10,14 @@ using namespace std;
 /**
  * \class Codigo
  * \brief Código é um conjunto de dígitos e letras que tem por função identificar instâncias, a fim de que cada instância tenha sua unicidade dentro do sistema. O código deve seguir o padrão 'LLDD' (L = letra, D = dígito).
- * \note 
+ * \note
  * \par Especificação
  *  Formato LLDD
  * \par
  *  L é letra maiúscula (A - Z)
  * \par
  *  D é dígito (0 – 9)
+ * \author Pedro Amorim / Matr 221029329
  */
 class Codigo {
     private:
@@ -26,13 +27,13 @@ class Codigo {
      * \brief Define o tamanho do código.
     */
         static const unsigned int TAMANHO_CODIGO = 4;
-    
+
     /**
      * \var valor
      * \brief Variável que armazena o código no formato de string.
     */
         string valor;
-    
+
     /**
      * \brief O método tem como intuito verificar se o código inserido apresenta as características válidas.
      * \param valor String que passará pelo processo de validação.
@@ -45,7 +46,7 @@ class Codigo {
     /**
      * \brief O método devolve o valor armazenado.
      * \return Valor que caracteriza o código.
-    */ 
+    */
         const string getCodigo();
 
     /**
@@ -64,9 +65,10 @@ inline const string Codigo::getCodigo() {
 /**
  * \class Coluna
  * \brief Coluna é um domínio que tem como papel definir a localizacao de um cartao no sistema, ela pode ser: "SOLICIDATADO", "EM EXECUCAO", "CONCLUIDO".
- * \note 
+ * \note
  * \par Especificação
  *  Deve ter valor = "SOLICITADO", "EM EXECUCAO" ou "CONCLUIDO".
+ * \author Pedro Amorim / Matr 221029329
  */
 class Coluna {
     private:
@@ -76,7 +78,7 @@ class Coluna {
      * \brief Valor que define a coluna.
     */
         string valor;
-    
+
     /**
      * \brief O método tem como intuito verificar se a coluna inserida apresenta as características válidas.
      * \param valor String que passará pelo processo de validação.
@@ -89,9 +91,9 @@ class Coluna {
     /**
      * \brief O método devolve o valor armazenado.
      * \return Valor que caracteriza a coluna.
-    */ 
+    */
         const string getColuna();
-    
+
     /**
      * \brief O método atribui um valor a coluna, se a entrada for validada, e lança um exceção se o valor for inválido.
      * \param valor String que será atribuída, se for validada.
@@ -108,19 +110,20 @@ inline const string Coluna::getColuna() {
 /**
  * \class Email
  * \brief Email é um nome que define um endereço eletronico, este é utilizado para a troca de mensagens eletronicas.
- * \note 
+ * \note
  * \par Especificação
  *  Formato: nome@domínio
  * \par
  *  nome é composto por 2 a 10 caracteres
  * \par
  *  domínio é composto por 2 a 20 caracteres
- * \par 
+ * \par
  *  Cada caractere é letra (A-Z ou a-z), dígito (0 – 9) ou ponto (.)
  * \par
  *  Caractere @ não pode ser imediatamente precedido ou sucedido por ponto (.)
  * \par
  *  Não há pontos (.) em sequência
+ * \author Pedro Amorim / Matr 221029329
  */
 class Email {
     private:
@@ -162,9 +165,9 @@ class Email {
     /**
      * \brief O método devolve o valor armazenado.
      * \return Valor que caracteriza a email.
-    */ 
+    */
         const string getEmail();
-    
+
     /**
      * \brief O método atribui um valor ao email, se a entrada for validada, e lança um exceção se o valor for inválido.
      * \param valor String que será atribuída, se for validada.
@@ -181,9 +184,10 @@ inline const string Email::getEmail() {
 /**
  * \class Limite
  * \brief Limite é o valor que delimita a quantidade máxima de cartões em um Quadro.
- * \note 
+ * \note
  * \par Especificação
  *  Deve ter valor = 5, 10, 15 ou 20
+ * \author Pedro Amorim / Matr 221029329
  */
 class Limite {
     private:
@@ -206,9 +210,9 @@ class Limite {
     /**
      * \brief O método devolve o valor armazenado.
      * \return Valor que caracteriza o limite.
-    */ 
+    */
         const unsigned int getLimite();
-    
+
     /**
      * \brief O método atribui um valor ao limite, se a entrada for validada, e lança um exceção se o valor for inválido.
      * \param valor Int que será atribuído, se for validada.
@@ -225,15 +229,16 @@ inline const unsigned int Limite::getLimite() {
 /**
  * \class Senha
  * \brief Senha é uma palavra-chave que garante a segurança de uma conta contra usuarios mal intencionados.
- * \note 
+ * \note
  * \par Especificação
  *  Formato: XXXXX
  * \par
  *  X é um dos seguintes caracteres: letra (A - Z, a - z), dígito (0 - 9), sinal de pontuação ( . , ; ? !)
  * \par
- *  Pelo menos um caractere é letra maiúscula, letra minúscula, dígito e sinal de pontuação 
+ *  Pelo menos um caractere é letra maiúscula, letra minúscula, dígito e sinal de pontuação
  * \par
  *  Não há caractere duplicado
+ * \author Pedro Amorim / Matr 221029329
  */
 class Senha {
     private:
@@ -243,13 +248,13 @@ class Senha {
      * \brief Valor que define o tamanho da senha.
     */
         static const unsigned int TAMANHO_SENHA = 5;
-    
+
     /**
      * \var valor
      * \brief Valor que define a senha.
     */
         string valor;
-    
+
     /**
      * \brief O método tem como intuito verificar se a senha inserida apresenta as características válidas.
      * \param valor String que passará pelo processo de validação.
@@ -261,14 +266,14 @@ class Senha {
     /**
      * \brief O método verifica se o caractere inserido é um sinal de pontuação ou não.
      * \return Booleano que representa se a entrada é um sinal de pontuação ou não.
-    */ 
+    */
         const bool ispontuacao(char);
     public:
 
     /**
      * \brief O método devolve o valor armazenado.
      * \return Valor que caracteriza a senha.
-    */ 
+    */
         const string getSenha();
 
     /**
@@ -287,10 +292,10 @@ inline const string Senha::getSenha() {
 /**
  * \class Texto
  * \brief Texto é um conjunto de caracteres que tem como objetivo expressar um nome ou uma ideia.
- * \note 
+ * \note
  * \par Especificação
  *  5 a 30 caracteres
- * \par 
+ * \par
  *  Cada caractere é letra (A - Z, a - z), dígito (0-9), sinal de pontuação ( . , ; ? !) ou espaço em branco
  * \par
  *  Não há espaços em branco em sequência
@@ -302,6 +307,7 @@ inline const string Senha::getSenha() {
  * Primeiro caractere é letra maiúscula
  * \par
  * Primeiro caractere após sinal de pontuação (exceto vírgula ou ponto-e-vírgula) é letra maiúscula
+ * \author Pedro Amorim / Matr 221029329
  */
 class Texto {
     private:
@@ -321,7 +327,7 @@ class Texto {
      * \brief Valor que define o texto.
     */
         string valor;
-    
+
     /**
      * \brief O método tem como intuito verificar se o texto inserido apresenta as características válidas.
      * \param valor String que passará pelo processo de validação.
@@ -329,20 +335,20 @@ class Texto {
      * \return void
     */
         const void validar(string);
-    
+
     /**
      * \brief O método verifica se o caractere inserido é um sinal de pontuação ou não.
      * \return Booleano que representa se a entrada é um sinal de pontuação ou não.
-    */ 
+    */
         const bool ispontuacao(char);
     public:
 
     /**
      * \brief O método devolve o valor armazenado.
      * \return Valor que caracteriza o texto.
-    */ 
+    */
         const string getTexto();
-    
+
     /**
      * \brief O método atribui um valor ao texto, se a entrada for validada, e lança um exceção se o valor for inválido.
      * \param valor String que será atribuída, se for validada.

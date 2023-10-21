@@ -1,10 +1,12 @@
 #ifndef ENTIDADES_H_INCLUDED
 #define ENTIDADES_H_INCLUDED
 
-#include "dominios.hpp"
+#include "dominios.h"
 #include <string>
 
 using namespace std;
+
+//Entidade | Feita por 170003370 |
 
 
 //=============================
@@ -25,14 +27,43 @@ class Conta {
         Senha senha;
 
     public:
-        ///Declara método set e get para cada atributo da classe Conta
+        /**
+         * \brief O metodo atribui um valor ao nome, se a entrada for validada, e lança um exceção se o valor for invalido.
+         * \param valor String que sera atribuída, se for validada.
+         * \exception invalid_argument O metodo lança uma exceção se o valor inserido nao apresentar todas as características da classe Texto.
+         * \return void
+        */
         void setNome(const Texto&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza o Texto.
+        */
         Texto getNome() const;
 
+        /**
+         * \brief O metodo atribui um valor ao email, se a entrada for validada, e lança um exceção se o valor for invalido.
+         * \param valor String que sera atribuída, se for validada.
+         * \exception invalid_argument O método lança uma exceçao se o valor inserido não apresentar todas as características da classe Email.
+         * \return void
+        */
         void setEmail(const Email&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza o Email.
+        */
         Email getEmail() const;
 
+        /**
+         * \brief O metodo atribui um valor a senha, se a entrada for validada, e lança um exceção se o valor for invalido.
+         * \param valor String que sera atribuída, se for validada.
+         * \exception invalid_argument O metodo lança uma exceção se o valor inserido não apresentar todas as características da classe Senha.
+         * \return void
+        */
         void setSenha(const Senha&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza a Senha.
+        */
         Senha getSenha() const;
 };
 
@@ -67,7 +98,7 @@ inline Senha Conta::getSenha() const {
 
 /**
 *@brief Classe Quadro
-*@brief Refere-se aos quadros Kanban criados pelos usuários.Um quadro Kanban permite a gestão das tarefas por meio das colunas - Solicitado, Em execucao e Concluido - e de cartoes, tarefas
+*@brief Refere-se aos quadros Kanban criados pelos usuarios.Um quadro Kanban permite a gestão das tarefas por meio das colunas - Solicitado, Em execucao e Concluido - e de cartoes, tarefas
 *@author Maria da Conceicao L Afonso / Matr 170003370
 */
 
@@ -80,17 +111,56 @@ class Quadro {
         Limite limite;
 
     public:
-        ///Declara método set e get para cada atributo da classe Quadro
+        /**
+         * \brief O método atribui um valor ao codigo, se a entrada for validada, e lança um exceção se o valor for invalido.
+         * \param valor String que sera atribuída, se for validada.
+         * \exception invalid_argument O método lança uma exceçao se o valor inserido não apresentar todas as características da classe Codigo.
+         * \return void
+        */
         void setCodigo(const Codigo&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza o Codigo.
+        */
         Codigo getCodigo() const;
 
+        /**
+         * \brief O metodo atribui um valor ao nome, se a entrada for validada, e lança um exceção se o valor for invalido.
+         * \param valor String que sera atribuída, se for validada.
+         * \exception invalid_argument O metodo lança uma exceção se o valor inserido nao apresentar todas as características da classe Texto.
+         * \return void
+        */
         void setNome(const Texto&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza o Texto.
+        */
         Texto getNome() const;
 
+        /**
+         * \brief O metodo atribui um valor a descricao, se a entrada for validada, e lança um exceçao se o valor for invalido.
+         * \param valor String que sera atribuida, se for validada.
+         * \exception invalid_argument O metodo lança uma exceção se o valor inserido não apresentar todas as características da classe Texto.
+         * \return void
+        */
         void setDescricao(const Texto&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza o Texto.
+        */
         Texto getDescricao() const;
 
+        /**
+         * \brief O método atribui um valor ao limite, se a entrada for validada, e lança um exceção se o valor for inválido.
+         * \param valor String que será atribuída, se for validada.
+         * \exception invalid_argument O método lança uma exceção se o valor inserido não apresentar todas as características da classe Limite.
+         * \return void
+        */
         void setLimite(const Limite&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza o Limite.
+        */
         Limite getLimite() const;
 };
 
@@ -146,17 +216,57 @@ class Cartao {
         Coluna coluna;
 
     public:
-        ///Declara método set e get para cada atributo da classe Cartao
+        /**
+         * \brief O método atribui um valor ao codigo, se a entrada for validada, e lança um exceção se o valor for inválido.
+         * \param valor String que será atribuída, se for validada.
+         * \exception invalid_argument O método lança uma exceção se o valor inserido não apresentar todas as características da classe Codigo.
+         * \return void
+        */
         void setCodigo(const Codigo&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza o Codigo.
+        */
         Codigo getCodigo() const;
 
+        /**
+         * \brief O método atribui um valor ao nome, se a entrada for validada, e lança um exceção se o valor for inválido.
+         * \param valor String que será atribuída, se for validada.
+         * \exception invalid_argument O método lança uma exceção se o valor inserido não apresentar todas as características da classe Texto.
+         * \return void
+        */
         void setNome(const Texto&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza o Texto.
+        */
         Texto getNome() const;
 
+        /**
+         * \brief O método atribui um valor a descricao, se a entrada for validada, e lança um exceção se o valor for inválido.
+         * \param valor String que será atribuída, se for validada.
+         * \exception invalid_argument O método lança uma exceção se o valor inserido não apresentar todas as características da classe Texto.
+         * \return void
+        */
         void setDescricao(const Texto&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza o Texto.
+        */
         Texto getDescricao() const;
 
+
+        /**
+         * \brief O método atribui um valor a coluna, se a entrada for validada, e lança um exceção se o valor for inválido.
+         * \param valor String que será atribuída, se for validada.
+         * \exception invalid_argument O método lança uma exceção se o valor inserido não apresentar todas as características da classe Coluna.
+         * \return void
+        */
         void setColuna(const Coluna&);
+        /**
+        * \brief O metodo devolve o valor armazenado.
+        * \return Valor que caracteriza a Coluna.
+        */
         Coluna getColuna() const;
 };
 

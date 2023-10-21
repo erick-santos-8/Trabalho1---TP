@@ -33,3 +33,33 @@
 	"entidades.h"
 	<string>
 
+1697915426 source:c:\users\esago\desktop\cloneprojeto\trabalho1---tp\trabalho tp\kanbanlib\dominios.cpp
+	"dominios.h"
+
+1697927061 c:\users\esago\desktop\cloneprojeto\trabalho1---tp\trabalho tp\kanbanlib\dominios.h
+	<string>
+	<stdexcept>
+
+1697915426 source:c:\users\esago\desktop\cloneprojeto\trabalho1---tp\trabalho tp\kanbanlib\entidades.cpp
+	"entidades.h"
+
+1697926900 c:\users\esago\desktop\cloneprojeto\trabalho1---tp\trabalho tp\kanbanlib\entidades.h
+	"dominios.h"
+	<string>
+
+1697919052 source:c:\users\esago\desktop\cloneprojeto\trabalho1---tp\trabalho tp\kanbanlib\main.cpp
+	<iostream>
+	"dominios.h"
+	"entidades.h"
+	"testes.h"
+
+1697924984 c:\users\esago\desktop\cloneprojeto\trabalho1---tp\trabalho tp\kanbanlib\testes.h
+	"dominios.h"
+	"entidades.h"
+	<string>
+
+1697919052 source:c:\users\esago\desktop\cloneprojeto\trabalho1---tp\trabalho tp\kanbanlib\testes.cpp
+	"testes.h"
+	<stdexcept>
+	<iostream>
+

@@ -20,6 +20,8 @@ int main()
 
     // Invocar método e apresentar mensagem acerca do resultado do teste.
 
+    //Testes dos Dominíos | Feito por 211020820 |
+
     switch(testeA.run()){
         case TUCodigo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
                                 break;
@@ -57,7 +59,11 @@ int main()
                                 break;
     }
 
+
     cout << "---------------------------------------------------" << endl;
+
+    //Testes de Entidades | Feito por 222031116 |
+
     switch(testeG.run()){
         case TUConta::SUCESSO: cout << "SUCESSO - CONTA" << endl;
                                 break;
