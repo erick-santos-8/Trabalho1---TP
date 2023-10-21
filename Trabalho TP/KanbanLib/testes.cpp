@@ -51,7 +51,7 @@ int TUCodigo::run(){
     return estado;
 }
 
-//Métodos da classe coluna
+//Métodos da classe TUColuna
 
 void TUColuna::setUp(){
     coluna = new Coluna();
@@ -243,7 +243,7 @@ int TUSenha::run(){
     return estado;
 }
 
-//Métodos da classe texto
+//Métodos da classe TUtexto
 
 void TUTexto::setUp(){
     texto = new Texto();
