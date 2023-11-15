@@ -28,6 +28,7 @@ public:
 
 class IAGestao {
   virtual void executar() = 0;
+  virtual void setCntrISGestao(ISGestao *) = 0;
   virtual ~IAGestao(){};
 };
 //-----------------------------------------------------------------------------
