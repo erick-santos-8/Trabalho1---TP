@@ -63,3 +63,60 @@
 	<stdexcept>
 	<iostream>
 
+1700660016 source:c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\dominios.cpp
+	"dominios.h"
+
+1700834894 c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\dominios.h
+	<string>
+	<stdexcept>
+
+1700660017 source:c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\entidades.cpp
+	"entidades.h"
+
+1700660017 c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\entidades.h
+	"dominios.h"
+	<string>
+
+1700841246 source:c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\main.cpp
+	<string.h>
+	<stdexcept>
+	<iostream>
+	"dominios.h"
+	"interfaces.h"
+	"controladorasapresentacao.h"
+	"stubs.h"
+
+1700660017 c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\testes.h
+	"dominios.h"
+	"entidades.h"
+	<string>
+
+1700660017 source:c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\testes.cpp
+	"testes.h"
+	<stdexcept>
+	<iostream>
+
+1700840657 source:c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\stubs.cpp
+	"stubs.h"
+
+1700841455 c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\stubs.h
+	<string>
+	"dominios.h"
+	"entidades.h"
+	"interfaces.h"
+
+1700841506 c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\interfaces.h
+	"dominios.h"
+	"entidades.h"
+
+1700833964 c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\controladorasapresentacao.h
+	<conio.h>
+	<iostream>
+	<string.h>
+	"dominios.h"
+	"entidades.h"
+	"interfaces.h"
+
+1700841718 source:c:\users\esago\desktop\minhaparte\trabalho1---tp\trabalho tp\kanbanlib\controladorasapresentacao.cpp
+	"controladorasapresentacao.h"
+

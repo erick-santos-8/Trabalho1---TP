@@ -20,13 +20,14 @@ public:
 
 class IAConta {
 public:
-  virtual void criar_conta() = 0;
+  virtual void criarConta() = 0;
   virtual void executar(Email) = 0;
   virtual void setCntrISConta(ISConta *) = 0;
   virtual ~IAConta(){};
 };
 
 class IAProjetos {
+public:
   virtual void executar() = 0;
   virtual void setCntrISProjetos(ISProjetos *) = 0;
   virtual ~IAProjetos(){};
@@ -43,7 +44,7 @@ public:
 
 class ISConta {
 public:
-  virtual bool criar_conta(Conta) = 0;
+  virtual bool criarConta(Conta) = 0;
   virtual bool eliminar(Email) = 0;
   virtual bool editar(Conta) = 0;
   virtual bool visualizar(Conta *) = 0;
@@ -53,15 +54,15 @@ public:
 class ISProjetos {
 public:
   // metodos para quadro
-  virtual bool criar_quadro(Quadro) = 0;
-  virtual bool visualizar_quadro(Codigo *) = 0;
-  virtual bool eliminar_quadro(Codigo) = 0;
+  virtual bool criarQuadro(Quadro) = 0;
+
+  virtual bool eliminarQuadro(Codigo) = 0;
 
   // metodos para cartao
-  virtual bool criar_cartao(Cartao) = 0;
-  virtual bool visualizar_cartao(Codigo *) = 0;
-  virtual bool mover_cartao(Codigo) = 0;
-  virtual bool eliminar_cartao(Codigo) = 0;
+  virtual bool criarCartao(Cartao) = 0;
+  virtual bool visualizarCartao(Codigo *) = 0;
+  virtual bool moverCartao(Codigo) = 0;
+  virtual bool eliminarCartao(Codigo) = 0;
 
   // metodo destrutor
   virtual ~ISProjetos(){};
