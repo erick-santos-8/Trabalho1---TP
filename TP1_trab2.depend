@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1701643133 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\main.cpp
+	<iostream>
+	"persistencia.h"
+	"stubs.h"
+	"controladorasapresentacao.h"
+
+1701546400 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\persistencia.h
+	"sqlite3.h"
+	"entidades.h"
+	<list>
+	<string>
+
+1604950702 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\sqlite3.h
+	<stdarg.h>
+
+1701546228 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\entidades.h
+	"dominios.h"
+
+1701546293 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\dominios.h
+	<string>
+
+1701545025 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\persistencia.cpp
+	"persistencia.h"
+
+1701641851 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\stubs.cpp
+	"stubs.h"
+	"persistencia.h"
+
+1701619822 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\stubs.h
+	<string>
+	"dominios.h"
+	"entidades.h"
+	"interfaces.h"
+
+1701619883 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\interfaces.h
+	"dominios.h"
+	"entidades.h"
+
+1701642912 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\controladorasapresentacao.h
+	<conio.h>
+	<iostream>
+	<string.h>
+	"dominios.h"
+	"entidades.h"
+	"interfaces.h"
+
+1701643938 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\controladorasapresentacao.cpp
+	"controladorasapresentacao.h"
+
