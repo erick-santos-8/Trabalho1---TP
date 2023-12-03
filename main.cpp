@@ -6,12 +6,12 @@
 int main(int argc, char *argv[])
 {
     Texto txtNome;
-    Texto txtEmail;
-    Texto txtSenha;
+    Email txtEmail;
+    Senha txtSenha;
 
     txtNome.setValor("avo");
     txtEmail.setValor("nboana@gmail.com");
-    txtSenha.setValor("9999");
+    txtSenha.setValor("12aB!");
 
     Conta conta;
     conta.setNome(txtNome);

@@ -193,8 +193,8 @@ void CntrIAConta::criarConta()
     // Instancia os dom�nios.
 
     Texto nome;
-    Texto email;
-    Texto senha;
+    Email email;
+    Senha senha;
 
     // Apresenta tela de cadastramento.
 
@@ -399,7 +399,7 @@ void CntrIAConta::editarDados()
                 case 3:
                     cout << texto27 << endl;
                     cin >> novoValor;
-                    contaNova.setSenha(Texto(novoValor));
+                    contaNova.setSenha(Senha(novoValor));
                     break;
                 case 4:
                     if(cntrSConta->editar(contaNova)) {
@@ -440,7 +440,7 @@ void CntrIAConta::consultarDadosPessoais()
     char texto10[] = "Opção invalida. Digite algo.";
     char texto11[] = "Sucesso na consulta. Digite algo.";
     char texto12[] = "Falha na consulta. Digite algo.";
-    
+
     char textoA[] = "Digite o email da conta para editar: ";
     char campoEmail[80];
 

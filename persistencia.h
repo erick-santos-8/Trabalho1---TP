@@ -73,6 +73,13 @@ public:
         Conta getResultado();
 };
 
+//--------------------------------------------------------------
+class ComandoCadastrarQuadro:public ComandoSQL {
+public:
+        ComandoCadastrarQuadro(Quadro);
+};
+
+
 /*
 class ComandoLerSenha:public ComandoSQL {
 public:

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1701643133 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\main.cpp
+1701646287 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\main.cpp
 	<iostream>
 	"persistencia.h"
 	"stubs.h"
@@ -14,13 +14,14 @@
 1604950702 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\sqlite3.h
 	<stdarg.h>
 
-1701546228 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\entidades.h
+1701646280 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\entidades.h
 	"dominios.h"
 
-1701546293 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\dominios.h
+1701646442 c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\dominios.h
 	<string>
+	<stdexcept>
 
-1701545025 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\persistencia.cpp
+1701646401 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\persistencia.cpp
 	"persistencia.h"
 
 1701641851 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\stubs.cpp
@@ -45,6 +46,9 @@
 	"entidades.h"
 	"interfaces.h"
 
-1701643938 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\controladorasapresentacao.cpp
+1701646492 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\controladorasapresentacao.cpp
 	"controladorasapresentacao.h"
+
+1701646569 source:c:\users\nikab\documents\tp1_2_2023\trab2_tp1_bd\dominios.cpp
+	"dominios.h"
 

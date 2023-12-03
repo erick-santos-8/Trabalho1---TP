@@ -12,7 +12,7 @@ string EErroPersistencia::what()
     return mensagem;
 }
 
-// Implementações de métodos da classe ElementoResultado.
+// Implementaï¿½ï¿½es de mï¿½todos da classe ElementoResultado.
 
 void ElementoResultado::setNomeColuna(const string& nomeColuna) {
         this->nomeColuna = nomeColuna;
@@ -68,7 +68,6 @@ void ComandoSQL::desconectar()
         throw EErroPersistencia("Erro na desconexao ao banco de dados");
 }
 
-
 ComandoCadastrarConta::ComandoCadastrarConta(Conta conta)
 {
     comandoSQL = "INSERT INTO CONTA (NOME, EMAIL, SENHA) VALUES ('"+
@@ -82,7 +81,6 @@ ComandoDeletarConta::ComandoDeletarConta(Texto email)
                  email.getValor()
                  +"';";
 };
-
 
 ComandoAtualizarConta::ComandoAtualizarConta(Conta conta)
 {
@@ -115,17 +113,25 @@ Conta ComandoConsultarConta::getResultado()
                 throw EErroPersistencia("Lista de resultados vazia.");
         resultado = listaResultado.back();
         listaResultado.pop_back();
-        conta.setEmail(Texto(resultado.getValorColuna()));
+        conta.setEmail(Email(resultado.getValorColuna()));
 
     // Remover senha;
         if (listaResultado.empty())
                 throw EErroPersistencia("Lista de resultados vazia.");
         resultado = listaResultado.back();
         listaResultado.pop_back();
-        conta.setSenha(Texto(resultado.getValorColuna()));
+        conta.setSenha(Senha(resultado.getValorColuna()));
 
     return conta;
 }
+
+
+ComandoCadastrarQuadro::ComandoCadastrarQuadro(Quadro quadro)
+{
+    comandoSQL = "INSERT INTO QUADRO (CODIGO, NOME, DESCRICAO, LIMITE) VALUES ('"+
+                 quadro.getCodigo().getValor()+"', '"+quadro.getNome().getValor()+"', '"+quadro.getDescricao().getValor()+"', '"+
+                 quadro.getLimite().getValor()+"');";
+};
 
 /*
 ComandoLerSenha::ComandoLerSenha(Email email)
